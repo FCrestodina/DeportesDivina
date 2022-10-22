@@ -1,12 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "."
-		},
-		{
 			"name": "DeportesDivina",
-			"path": "DeportesDivina"
+			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DeportesDivina"
+	}
 }
