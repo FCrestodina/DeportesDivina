@@ -1,102 +1,110 @@
 body{
 	background-color: #e49116;
 	font-family: "Open Sans", sans-serif;
-  line-height: 1.25;
+  	line-height: 1.25;
 }
 
-table{
-	background-color: white;
-	text-align: left;
+table {
 	border: 1px solid #ccc;
 	border-collapse: collapse;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	table-layout: fixed;
-}
-
-table caption {
+  }
+  
+  table caption {
 	font-size: 1.5em;
 	margin: .5em 0 .75em;
   }
-
-table tr {
+  
+  table tr {
 	background-color: #f8f8f8;
 	border: 1px solid #ddd;
 	padding: .35em;
-}
-
-table th, table td {
+  }
+  
+  table th,
+  table td {
 	padding: .625em;
 	text-align: center;
-}
-
-table th {
+  }
+  
+  table th {
 	font-size: .85em;
 	letter-spacing: .1em;
 	text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
+  }
+  
+  @media screen and (max-width: 600px) {
 	table {
 	  border: 0;
 	}
-
+  
 	table caption {
-		font-size: 1.3em;
-	  }
-	  
-	  table thead {
-		border: none;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	  }
-
-	  table thead tr {
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	  }
-	  
-	  table tr {
-		border-bottom: 3px solid #ddd;
-		display: block;
-		margin-bottom: .625em;
-	  }
-	  
-	  table td {
-		border-bottom: 1px solid #ddd;
-		display: block;
-		font-size: .8em;
-		text-align: right;
-	  }
-	  
-	  table td::before {
-		content: attr(data-label);
-		float: left;
-		font-weight: bold;
-		text-transform: uppercase;
-	  }
-	  
-	  table td:last-child {
-		border-bottom: 0;
-	  }
-}
-
-tr:nth-child(even){
-	background-color: #ddd;
-}
+	  font-size: 1.3em;
+	}
+	
+	table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	
+	table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: .8em;
+	  text-align: right;
+	}
+	
+	table td::before {
+	  content: attr(data-label);
+	  float: left;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	
+	table td:last-child {
+	  border-bottom: 0;
+	}
+  }
 
 tr:hover td{
 	background-color: #0F362D;
 	color: white;
+}
+
+.abm {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.abm {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
 }

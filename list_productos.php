@@ -15,24 +15,34 @@
 	<?php
 		if($listProductos->num_rows > 0){
 			Echo 
-				"<table>
-					<thead>
-						<tr>
-							<th>Id</th><th>Deporte</th><th>Marca</th><th>Color</th><th>Talle</th><th>Stock</th><th>Precio</th><th>Proveedor</th><th>Mail del proveedor</th><th>Fecha de reposicion</th><th>Telefono del proveedor</th><th>Costo de compra</th>
-						</tr>
-					</thead>
+				"
+				<a href=form_createproducto.php target='_blank'><button class='abm'>Crear un producto</button></a>
+				<a href=admin_site.html target='_blank'><button class='abm'>Editar un producto</button></a>
+				<a href=admin_site.html target='_blank'><button class='abm'>Eliminar un producto</button></a>
+				<table>
+					<caption>Listado de productos</caption>
+						<thead>
+							<tr>
+								<th>Id</th><th>Deporte</th><th>Marca</th><th>Color</th><th>Talle</th><th>Stock</th><th>Precio</th><th>Proveedor</th>
+								<th>Mail del proveedor</th><th>Fecha de reposicion</th><th>Telefono del proveedor</th><th>Costo de compra</th>
+							</tr>
+						</thead>
 				</table>";		
 			while($row = $listProductos->fetch_assoc()) {
 				Echo	
 					"<table>
-						<tr>
-							<td>".$row['Id']."</td><td>".$row['Deporte']."</td><td>".$row['Marca']."</td>
-							<td>".$row['Color']."</td><td>".$row['Talle']."</td><td>".$row['Stock']."</td>
-							<td>".$row['Precio']."</td><td>".$row['Proveedor']."</td><td>".$row['MailProveedor']."</td>
-							<td>".$row['FechaReposicion']."</td><td>".$row['TelefonoProveedor']."</td><td>".$row['CostoCompra']."</td>
-						</tr>							
-					</table>";				
+						<tbody>
+							<tr>
+								<td>".$row['Id']."</td><td>".$row['Deporte']."</td><td>".$row['Marca']."</td>
+								<td>".$row['Color']."</td><td>".$row['Talle']."</td><td>".$row['Stock']."</td>
+								<td>".$row['Precio']."</td><td>".$row['Proveedor']."</td><td>".$row['MailProveedor']."</td>
+								<td>".$row['FechaReposicion']."</td><td>".$row['TelefonoProveedor']."</td><td>".$row['CostoCompra']."</td>
+							</tr>							
+						</tbody>
+					</table>
+					";				
 			}
+			Echo "<br/><br/><a href=admin_site.html><button>Volver</button></a>";
 		}else{
 			Echo "Error";
 		}
