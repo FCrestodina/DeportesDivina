@@ -17,8 +17,8 @@
 			Echo 
 				"
 				<a href=form_createproducto.php target='_blank'><button class='abm'>Crear un producto</button></a>
-				<a href=admin_site.html target='_blank'><button class='abm'>Editar un producto</button></a>
-				<a href=admin_site.html target='_blank'><button class='abm'>Eliminar un producto</button></a>
+				<a href=form_updateproducto.php target='_blank'><button class='abm'>Modificar un producto</button></a>
+				<a href=form_deleteproducto.php target='_blank'><button class='abm'>Eliminar un producto</button></a>
 				<table>
 					<caption>Listado de productos</caption>
 						<thead>

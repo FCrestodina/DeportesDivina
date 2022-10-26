@@ -2,12 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Crear producto</title>
+<title>Modificar producto</title>
 </head>
 
 <body>
-	<h2>Creacion de un producto</h2>
-    <form action="crearproducto.php" method="post" ><br />  
+	<h2>Modificación de un producto</h2>
+    <form action="updateproducto.php" method="post" ><br />  
+        <label>Id
+        	<input name="Id" type="text" maxlength="255" required />
+        </label><br />
         <label>Deporte
         	<input name="Deporte" type="text" maxlength="255" required />
         </label><br />
@@ -33,15 +36,18 @@
         	<input name="Proveedor" type="text" maxlength="255" required />
         </label><br />
         <label>Mail del Proveedor
+            <input type="email" name="MailProveedor " />
+        </label><br />
+        <label>Fecha de Reposición
             <input type="email" name="email" />
         </label><br />
         <label>Telefono del Proveedor
-            <input type="TelefonoProveedor" name="text" maxlength="255" required />
+            <input type="text" name="TelefonoProveedor" maxlength="255" required />
         </label><br />
         <label>Costo de Compra
             <input type="text" name="Costo" required />
         </label><br /><br />  
-        <input type="submit" value="CrearProducto"/>	
+        <input type="submit" value="UpdateProducto"/>	
     </form>
 
 </body>
