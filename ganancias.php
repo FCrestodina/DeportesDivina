@@ -2,7 +2,7 @@
     session_start();
     include("conexion.php");
     $listProductos=mysqli_query($conexion, "SELECT Deporte, Nombre, Marca, Color, Talle, Precio, CantidadVendida FROM producto
-                                WHERE Eliminado = 0 ORDER BY Deporte ASC");
+                                WHERE Eliminado = 0 ORDER BY Deporte ASC, Nombre ASC");
 ?>
 
 <!DOCTYPE html>

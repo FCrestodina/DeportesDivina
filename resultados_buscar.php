@@ -14,7 +14,7 @@
 	$buscar = $_POST['buscar'];
 	echo "Su consulta: <em>".$buscar."</em><br>";
 
-	$consulta = mysqli_query($conexion, "SELECT Id, Deporte, Nombre, Marca, Color, Talle, Stock, Precio FROM producto WHERE Nombre LIKE '%$buscar%' ");
+	$consulta = mysqli_query($conexion, "SELECT Id, Deporte, Nombre, Marca, Color, Talle, Stock, Precio FROM producto WHERE Nombre LIKE '%$buscar%' ORDER BY Deporte ASC, Nombre ASC ");
 ?>
 	<p>Cantidad de Resultados: 
 	<?php

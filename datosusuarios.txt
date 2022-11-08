@@ -1,7 +1,7 @@
 ADMIN:
-Usuario: g
-Password: 1
+Usuario: UsuarioAdmin
+Password: adminadmin
 
 EMPLEADO:
-Usuario: a
-Password: a
+Usuario: UsuarioInvitado
+Password: empleado

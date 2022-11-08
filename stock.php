@@ -2,7 +2,7 @@
     session_start();
     include("conexion.php");
     $listProductos=mysqli_query($conexion, "SELECT Id, Deporte, Nombre, Marca, Color, Talle, Precio, Stock, Proveedor, MailProveedor, TelefonoProveedor FROM producto
-                                WHERE Eliminado = 0 ORDER BY Stock ASC");
+                                WHERE Eliminado = 0 ORDER BY Stock ASC, Deporte ASC, Nombre ASC");
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
 						<tr>
 						<td>".$row['Deporte']."</td><td>".$row['Nombre']."</td><td>".$row['Marca']."</td>
 						<td>".$row['Color']."</td><td>".$row['Talle']."</td><td>".$row['Precio']."</td><td>".$row['Stock']."</td>
-						<td><a href=form_contactar.php target='_blank'><button class='abm'>Contactar</button></a></td>
+						<td><a href=form_contactar.php><button class='abm'>Contactar</button></a></td>
 						</tr>							
 					</table>";				
 			}
