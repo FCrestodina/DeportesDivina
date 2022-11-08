@@ -33,14 +33,11 @@
         	<input name="Proveedor" type="text" maxlength="255" required />
         </label><br />
         <label>Mail del Proveedor
-            <input type="email" name="email" />
+            <input name="MailProveedor" type="email" maxlength="255"/>
         </label><br />
         <label>Telefono del Proveedor
-            <input type="TelefonoProveedor" name="text" maxlength="255" required />
+            <input name="TelefonoProveedor" type="text" maxlength="255" />
         </label><br />
-        <label>Costo de Compra
-            <input type="text" name="Costo" required />
-        </label><br /><br />  
         <input type="submit" value="CrearProducto"/>	
     </form>
 

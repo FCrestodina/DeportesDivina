@@ -1,7 +1,8 @@
 <?php
     session_start();
     include("conexion.php");
-    $listProductos=mysqli_query($conexion, "SELECT Id, Deporte, Nombre, Marca, Color, Talle, Stock, Precio, Proveedor, MailProveedor, FechaReposicion, TelefonoProveedor, CostoCompra FROM producto ORDER BY Stock ASC");
+    $listProductos=mysqli_query($conexion, "SELECT Id, Deporte, Nombre, Marca, Color, Talle, Precio, Stock, Proveedor, MailProveedor, TelefonoProveedor FROM producto
+                                WHERE Eliminado = 0 ORDER BY Stock ASC");
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +19,8 @@
 				"<table>
 					<thead>
 						<tr>
-							<th scope='col'>Id</th><th scope='col'>Deporte</th><th scope='col'>Marca</th><th scope='col'>Color</th><th scope='col'>Talle</th>
-                            <th scope='col'>Stock</th><th scope='col'>Precio</th><th scope='col'>Proveedor</th><th scope='col'>MailProveedor</th><th scope='col'>FechaReposicion</th>
-                            <th scope='col'>TelefonoProveedor</th><th scope='col'>CostoCompra</th>
+						<th scope='col'>Deporte</th><th scope='col'>Nombre</th><th scope='col'>Marca</th><th scope='col'>Color</th><th scope='col'>Talle</th>
+						<th scope='col'>Precio</th><th scope='col'>Stock</th><th>Proveedor</th>
 						</tr>
 					</thead>
 				</table>";		
@@ -28,13 +28,13 @@
 				Echo	
 					"<table>
 						<tr>
-							<td>".$row['Id']."</td><td>".$row['Deporte']."</td><td>".$row['Marca']."</td>
-							<td>".$row['Color']."</td><td>".$row['Talle']."</td><td>".$row['Stock']."</td>
-							<td>".$row['Precio']."</td><td>".$row['Proveedor']."</td><td>".$row['MailProveedor']."</td>
-							<td>".$row['FechaReposicion']."</td><td>".$row['TelefonoProveedor']."</td><td>".$row['CostoCompra']."</td>
+						<td>".$row['Deporte']."</td><td>".$row['Nombre']."</td><td>".$row['Marca']."</td>
+						<td>".$row['Color']."</td><td>".$row['Talle']."</td><td>".$row['Precio']."</td><td>".$row['Stock']."</td>
+						<td><a href=form_contactar.php target='_blank'><button class='abm'>Contactar</button></a></td>
 						</tr>							
 					</table>";				
 			}
+			Echo "<br/><br/><a href=admin_site.php><button>Volver</button></a>";
 		}else{
 			Echo "Error";
 		}
