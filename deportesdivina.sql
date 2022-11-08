@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2022 a las 15:54:46
+-- Tiempo de generación: 08-11-2022 a las 23:07:32
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -48,13 +48,11 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`Id`, `Deporte`, `Nombre`, `Marca`, `Color`, `Talle`, `Stock`, `Precio`, `Proveedor`, `MailProveedor`, `TelefonoProveedor`, `Eliminado`, `CantidadVendida`) VALUES
-(2, 'DeportePrueba2', 'NombrePrueba2', 'MarcaPrueba2', 'ColorPrueba2', 'TallePrueba2', 2, 220, 'Proveedor2', 'MailProveedor2@gmail.com', '+541164578411', 0, 1),
-(5, '[furbvo]', '[ad]', '[aduidas]', '[verd]', '[xd]', 22, 12, '[mama]', '[fafas@hola.com]', NULL, 1, 0),
-(6, 'b', 'b', 'b', 'b', 'b', 2, 3, 'b', 'b@gmail.com', '22', 1, 1),
-(7, 't', 't', 't', 't', 't', 4, 6, 'a', '', '11524321', 0, 0),
-(8, 'y', 'y', 'y', 'y', 'y', 9, 9, 'y', 'hola@yahoo.com', '', 0, 0),
-(9, 'a', 'a', 'a', 'aa', 'a', 20, 4, 'a', 'hola@yahoo.com', '', 1, 8),
-(10, 'dsf', 'dfsd', 'fds', 'fdsfsdf', 'sdfds', 34, 234, 'afasf', 'gasgasagas@hotmail.com', '325522', 0, 0);
+(11, 'Futbol', 'Chomba de arbitro', 'Adidas', 'Negra', 'XL', 3, 9700, 'Adidas San Justo', 'adidas@gmail.com', NULL, 0, 7),
+(12, 'Futbol', 'Chomba de arbitro', 'Adidas', 'Negra', 'M', 4, 9700, 'Adidas San Justo', 'adidas@gmail.com', NULL, 0, 4),
+(13, 'Patín', 'Malla de competencia', 'Sports', 'Blanca', 'S', 3, 2700, 'Sporty', '', '1164576457', 0, 2),
+(14, 'Futbol', 'Botines', 'Nike', 'Azul', '43', 1, 34550, 'Nike ARG', 'nike@gmail.com.ar', NULL, 0, 1),
+(15, 'Boxeo', 'Bolsa de boxeo', 'Puño', 'Rojo', '1.2m', 2, 75000, 'Boxing', 'boxeocosas@gmail.com', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -77,13 +75,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`Id`, `Nombre`, `Password`, `Email`, `IsAdmin`, `Usuario`) VALUES
 (1, 'Franco Crestodina', '$2y$10$7LdCnjnGkhIeuSZmO9XjlOhzFs5rNMgNlOILg7DLNjh29OheWkEHa', 'francresto00@gmail.com', 1, 'FranCresto'),
-(4, 'Invitado', '$2y$10$0PHBIPgRGnhxQNzDPUUD0euvTpFvEYM1RCRETg.BC4r/ZU4Jo3fPW', 'usuarioinvitado@yopmail.com', 0, 'UsuarioInvitado'),
-(5, 'gabriela', '$2y$10$7IYcriuWK0k/99n3nV0eHuCunDaY5kjgnpViAzPqKnK7NVy1nIzZe', 'gaby@yopmail.com', 0, 'gaby'),
-(6, 'a', '$2y$10$CdrflGxUmeyiQuvszLqh8ul5wYLIJsSqw.x6aRGSgPlKEICBTFGk6', 'a@yopmail.com', 0, 'a'),
-(7, 'b', '$2y$10$.YxXFmZMaLp29roVe4HwFuzhoC/Xe3ZHUsKaRmYFXBbhJ0reiqpMe', 'b@yopmail.com', 0, 'b'),
-(8, 'c', '$2y$10$v2zOZjF..dY1cmXFkgGAT.Cj4DFXw3VWsdObgbJLgodSmZk1BMHZS', 'c@hotmail.com', 0, 'c'),
-(9, 'd', '$2y$10$I9tG7Hhny6pu3GcKORJZseHLTBDwjv4aLWp/i9Q.vRsmWAtOXGRmO', 'd@gmial.com', 0, 'd'),
-(10, 'g', '$2y$10$yFlf.0NujOKnyXbVwH5Muuj/VUxYCRVMzD8xU79RTQPZBwAAT3hzi', 'gaby@yopmail.com', 1, 'g');
+(11, 'Usuario de Administración', '$2y$10$lrQEzeE3Irh4Anyc1Xi91Ob.D8UpUxMWwwM5eCdvyYuT5gNOXzYY2', 'usuarioadmin@gmail.com', 1, 'UsuarioAdmin'),
+(12, 'Usuario de Empleado', '$2y$10$vgHd5p4q7gBeQr/EFB3GDOhYLGPaHE6XgOchh8IRB4ODznA6u8o8a', 'usuarioinvitado@yopmail.com', 0, 'UsuarioInvitado');
 
 --
 -- Índices para tablas volcadas
@@ -109,13 +102,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
