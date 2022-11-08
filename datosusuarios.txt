@@ -1,0 +1,7 @@
+ADMIN:
+Usuario: g
+Password: 1
+
+EMPLEADO:
+Usuario: a
+Password: a
