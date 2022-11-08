@@ -8,10 +8,6 @@
     font-size: 20px;
 }
 
-body{
-    background-color: #e9f5d6;
-}
-
 .header{
     background-color: #e49116;
     display: flex;
@@ -19,20 +15,6 @@ body{
     align-items: center;
     height: 85px;
     padding: 5px 10%;
-}
-
-.header .logo{
-    cursor: pointer;
-}
-
-.header .logo img{
-    height: 70px;
-    width: auto;
-    transition: all 0.3s;
-}
-
-.header .logo img:hover{
-    transform: scale(1.2);
 }
 
 .header .nav-links{
@@ -59,12 +41,12 @@ body{
 }
 
 .header .btn button{
-    font-weight: 700;
+    font-weight: 300;
     color: #1b3039;
-    padding: 9px 25px;
+    padding: 6px 15px;
     background: #eceff1;
     border: none;
-    border-radius: 50px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }

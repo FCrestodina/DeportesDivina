@@ -12,11 +12,16 @@
 	$email = $_POST['email'];
 	$usuario = $_POST['usuario'];
 	$password = $_POST['password'];
-	$cifrada = password_hash($password, PASSWORD_DEFAULT);
+	if($_POST['admin']){
+		$admin = true;
+	}
+	else{
+		$admin = false;
+	}
 
 	include("conexion.php");
 
-	$consulta = mysqli_query($conexion, "INSERT INTO usuario (Nombre, Email, Usuario, Password) VALUES ('$nombre','$email', '$usuario', '$cifrada')");
+	$consulta = mysqli_query($conexion, "INSERT INTO usuario (Nombre, Email, Usuario, Password, IsAdmin) VALUES ('$nombre','$email', '$usuario', '$password', '$admin')");
 
 	header("Location:form_login.php");
 

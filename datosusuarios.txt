@@ -1,0 +1,7 @@
+ADMIN:
+Usuario: UsuarioAdmin
+Password: adminadmin
+
+EMPLEADO:
+Usuario: UsuarioInvitado
+Password: empleado

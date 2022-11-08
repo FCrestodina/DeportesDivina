@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2022 a las 00:33:45
+-- Tiempo de generación: 08-11-2022 a las 23:07:32
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -38,18 +38,21 @@ CREATE TABLE `producto` (
   `Precio` float NOT NULL,
   `Proveedor` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `MailProveedor` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `FechaReposicion` date DEFAULT NULL,
   `TelefonoProveedor` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
-  `CostoCompra` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL
+  `Eliminado` tinyint(1) DEFAULT NULL,
+  `CantidadVendida` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`Id`, `Deporte`, `Nombre`, `Marca`, `Color`, `Talle`, `Stock`, `Precio`, `Proveedor`, `MailProveedor`, `FechaReposicion`, `TelefonoProveedor`, `CostoCompra`) VALUES
-(1, '[DeportePrueba]', '[NombrePrueba]', '[MarcaPrueba]', '[ColorPrueba]', '[TallePrueba]', 0, 0, '[Proveedor]', '[MailProveedor@gmail.com]', '0000-00-00', '[+541164578484]', '[255]'),
-(2, 'DeportePrueba2', 'NombrePrueba2', 'MarcaPrueba2', 'ColorPrueba2', 'TallePrueba2', 102, 220, 'Proveedor2', 'MailProveedor2@gmail.com', '0000-00-00', '+541164578411', '2255');
+INSERT INTO `producto` (`Id`, `Deporte`, `Nombre`, `Marca`, `Color`, `Talle`, `Stock`, `Precio`, `Proveedor`, `MailProveedor`, `TelefonoProveedor`, `Eliminado`, `CantidadVendida`) VALUES
+(11, 'Futbol', 'Chomba de arbitro', 'Adidas', 'Negra', 'XL', 3, 9700, 'Adidas San Justo', 'adidas@gmail.com', NULL, 0, 7),
+(12, 'Futbol', 'Chomba de arbitro', 'Adidas', 'Negra', 'M', 4, 9700, 'Adidas San Justo', 'adidas@gmail.com', NULL, 0, 4),
+(13, 'Patín', 'Malla de competencia', 'Sports', 'Blanca', 'S', 3, 2700, 'Sporty', '', '1164576457', 0, 2),
+(14, 'Futbol', 'Botines', 'Nike', 'Azul', '43', 1, 34550, 'Nike ARG', 'nike@gmail.com.ar', NULL, 0, 1),
+(15, 'Boxeo', 'Bolsa de boxeo', 'Puño', 'Rojo', '1.2m', 2, 75000, 'Boxing', 'boxeocosas@gmail.com', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -72,8 +75,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`Id`, `Nombre`, `Password`, `Email`, `IsAdmin`, `Usuario`) VALUES
 (1, 'Franco Crestodina', '$2y$10$7LdCnjnGkhIeuSZmO9XjlOhzFs5rNMgNlOILg7DLNjh29OheWkEHa', 'francresto00@gmail.com', 1, 'FranCresto'),
-(4, 'Invitado', '$2y$10$0PHBIPgRGnhxQNzDPUUD0euvTpFvEYM1RCRETg.BC4r/ZU4Jo3fPW', 'usuarioinvitado@yopmail.com', 0, 'UsuarioInvitado'),
-(5, 'gabriela', '$2y$10$7IYcriuWK0k/99n3nV0eHuCunDaY5kjgnpViAzPqKnK7NVy1nIzZe', 'gaby@yopmail.com', 0, 'gaby');
+(11, 'Usuario de Administración', '$2y$10$lrQEzeE3Irh4Anyc1Xi91Ob.D8UpUxMWwwM5eCdvyYuT5gNOXzYY2', 'usuarioadmin@gmail.com', 1, 'UsuarioAdmin'),
+(12, 'Usuario de Empleado', '$2y$10$vgHd5p4q7gBeQr/EFB3GDOhYLGPaHE6XgOchh8IRB4ODznA6u8o8a', 'usuarioinvitado@yopmail.com', 0, 'UsuarioInvitado');
 
 --
 -- Índices para tablas volcadas
@@ -99,13 +102,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

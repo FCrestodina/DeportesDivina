@@ -16,6 +16,6 @@
         </label><br />
         	<input type="submit" value="Login"/>	
     </form>
-    <a href="form_registro.php">Registrate</a> si no dispones de un usuario.
+	En caso de ser la primera vez que ingresa, por favor, <a href="form_first_pass.php">cambiar</a> la contraseña.
 </body>
 </html>
